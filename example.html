@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<body>
+    <canvas id="chart"></canvas>
+    <script>
+        var data = {'length': 0, 'labels': ['10:00', '11:00', '12:00', '13:00'], 'datasets': [{'pointHoverBorderWidth': 2, 'pointHoverRadius': 3, 'pointBackgroundColor': '#fff', 'pointBorderWidth': 1, 'borderCapStyle': 'butt', 'fill': 0, 'pointHoverBackgroundColor': 'rgba(86, 150, 212, 0.4)', 'borderDashOffset': 0.0, 'borderJoinStyle': 'miter', 'label': 'Temperature', 'borderColor': 'rgba(86, 150, 212, 1)', 'pointHitRadius': 10, 'pointHoverBorderColor': 'rgba(86, 150, 212, 1)', 'data': [20, 20, 21, 20], 'spanGaps': 'false', 'pointBorderColor': 'rgba(86, 150, 212, 1)', 'borderDash': [0, 1], 'pointRadius': 1, 'backgroundColor': 'rgba(86, 150, 212, 0.4)', 'lineTension': 0.1}, {'pointHoverBorderWidth': 2, 'pointHoverRadius': 3, 'pointBackgroundColor': '#fff', 'pointBorderWidth': 1, 'borderCapStyle': 'butt', 'fill': 0, 'pointHoverBackgroundColor': 'rgba(252, 207, 38, 0.4)', 'borderDashOffset': 0.0, 'borderJoinStyle': 'miter', 'label': 'Humidity', 'borderColor': 'rgba(252, 207, 38, 1)', 'pointHitRadius': 10, 'pointHoverBorderColor': 'rgba(252, 207, 38, 1)', 'data': [30, 31, 29, 30], 'spanGaps': 'false', 'pointBorderColor': 'rgba(252, 207, 38, 1)', 'borderDash': [], 'pointRadius': 1, 'backgroundColor': 'rgba(252, 207, 38, 0.4)', 'lineTension': 0.1}]}; // pass chart.response to data 
+        var ctx = document.getElementById("chart");
+        var BME280chart = new Chart(ctx, {
+            type: 'line',
+            data: data,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                animation : false,
+                elements: { 
+                    point: { 
+                        radius: 0 
+                    } 
+                }
+            }
+        });
+    </script>
+</body>
+</html>
