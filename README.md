@@ -28,4 +28,4 @@ chart.addLabels(["10:00", "11:00", "12:00", "13:00"])
 chart.response
 ```
 
-Open index.html to see the data rendered
+Open index.html to see the chart rendered
