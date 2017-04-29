@@ -12,8 +12,9 @@ addDataset(label, data, color, **kwargs)
 
 ``` Python
 addLabels(labels)
-  * labels: List of labels
 ```
+  * labels: List of labels
+
 
 Example:
 ``` Python
