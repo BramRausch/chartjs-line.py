@@ -6,7 +6,7 @@ Python module to generate chartjs-line JSON data
 addDataset(label, data, color, **kwargs)
 ```
   * label: The title of the dataset (str)
-  * data: An array of data
+  * data: A list of data
   * color: One of the build in colors (blue, yellow, green, red, purple)
   * **kwargs: Additional chartJS settings
 
